@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Apples</title>
+		<link rel="stylesheet" type="text/css" href="/Templates/css/homepage.css">
+	</head>     
+	<body>
+		<h1>Homepage</h1>
+		<ul style="display: flex;
+                   justify-content: space;
+                   flex-direction: row;">
+
+			{% for trajet in trajets %}
+				<div class="info-card">
+					<div
+						class="info-card-image">{# <img src="{{ imageUrl }}" alt="{{ imageAlt }}" /> #}
+					</div>
+					<div class="info-card-content">
+						<h3>Trajet</h3>
+						<p>{{ trajet.getDestination }}</p>
+						<p>{{ trajet.getStartDate }}</p>
+						<p>{{ trajet.getEndDate }}</p>
+					</div>
+				</div>
+			{% else %}
+				<li>No trips found.</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": ["/app/Config/routes.json"],
+            "url": "./app/Config/routes-schema2.json"
+        }
+    ]
+}

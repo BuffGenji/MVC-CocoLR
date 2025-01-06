@@ -1,0 +1,27 @@
+.trajet-container {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.trajet-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.trajet-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.trajet-details h2 {
+    margin-top: 0;
+}
+
+.trajet-details p {
+    margin: 10px 0;
+}

@@ -1,0 +1,95 @@
+{
+    "$schema": "./routes-schema2.json",
+    "routes": [
+        {
+            "method": "get",
+            "path": "/",
+            "handler": "App\\Controllers\\HomeController",
+            "action": "render",
+            "name": "home_render"
+        },
+        {
+            "method": "get",
+            "path": "/signup",
+            "handler": "App\\Controllers\\SignUpController",
+            "action": "render",
+            "name": "signup_render"
+        },
+        {
+            "method": "post",
+            "path": "/signup",
+            "handler": "App\\Controllers\\SignUpController",
+            "action": "signup",
+            "name": "signup"
+        },
+        {
+            "method": "get",
+            "path": "/login",
+            "handler": "App\\Controllers\\LogInController",
+            "action": "render",
+            "name": "login_render"
+        },
+        {   
+            "method": "post",
+            "path": "/login",
+            "handler": "App\\Controllers\\LogInController",
+            "action": "login",
+            "name": "login"
+        },
+        {
+            "method": "get",
+            "path": "/dashboard",
+            "handler": "App\\Controllers\\DashboardController",
+            "action": "render",
+            "name": "dashboard_render"
+        },
+        {
+            "method": "get",
+            "path": "/trajet/create",
+            "handler": "App\\Controllers\\TrajetCreatorController",
+            "action": "render",
+            "name": "render_trajet_creator"
+        },
+        {
+            "method": "post",
+            "path": "/trajet/create",
+            "handler": "App\\Controllers\\TrajetCreatorController",
+            "action": "createTrajet",
+            "name": "create_trajet_trajet_creator"
+        },
+        {
+            "method": "get",
+            "path": "/trajet/confirm",
+            "handler": "App\\Controllers\\ConfirmTrajetController",
+            "action": "render",
+            "name": "render_confirm_trajet"
+        },{
+            "method": "post",
+            "path": "/trajet/confirm",
+            "handler": "App\\Controllers\\ConfirmTrajetController",
+            "action": "confirm",
+            "name" : "confirm_trajet"
+        },
+        {
+            "method": "get",
+            "path": "/trajet/delete/{id}",
+            "handler": "App\\Controllers\\TrajetController",
+            "action": "delete",
+            "name": "delete_trajet"
+        },
+        {
+            "method": "get",
+            "path": "/trajet/{id}",
+            "handler": "App\\Controllers\\TrajetController",
+            "action": "render",
+            "name": "render_trajet"
+        }, 
+        {
+            "method": "get",
+            "path": "/logout",
+            "handler": "App\\Controllers\\LogOutController",
+            "action": "logOut",
+            "name" : "logout"
+        }
+    ]
+}

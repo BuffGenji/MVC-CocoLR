@@ -1,0 +1,115 @@
+{
+    "title": "Routes Configuration",
+    "description": "Schema for routes configuration file",
+    "type": "object",
+    "properties": {
+        "routes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "method": {
+                        "type": "string",
+                        "enum": [
+                            "get",
+                            "post",
+                            "put",
+                            "delete",
+                            "patch"
+                        ],
+                        "description": "HTTP method for the route"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Path for the route"
+                    },
+                    "handler": {
+                        "type": "string",
+                        "enum": [
+                            "App\\Controllers\\HomeController",
+                            "App\\Controllers\\LogInController",
+                            "App\\Controllers\\SignUpController"
+                        ],
+                        "description": "Handler class for the route"
+                    },
+                    "action": {
+                        "type": "string",
+                        "description": "Action method in the handler class",
+                        "allOf": [
+                            {
+                                "if": {
+                                    "properties": {
+                                        "handler": {
+                                            "const": "App\\Controllers\\HomeController"
+                                        }
+                                    }
+                                },
+                                "then": {
+                                    "properties": {
+                                        "action": {
+                                            "enum": [
+                                                "render",
+                                                "apples"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "if": {
+                                    "properties": {
+                                        "handler": {
+                                            "const": "App\\Controllers\\LogInController"
+                                        }
+                                    }
+                                },
+                                "then": {
+                                    "properties": {
+                                        "action": {
+                                            "enum": [
+                                                "render",
+                                                "login"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "if": {
+                                    "properties": {
+                                        "handler": {
+                                            "const": "App\\Controllers\\SignUpController"
+                                        }
+                                    }
+                                },
+                                "then": {
+                                    "properties": {
+                                        "action": {
+                                            "enum": [
+                                                "render",
+                                                "signUp"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "name" : {
+                        "type" : "string",
+                        "description" : "Name for the route, used in the redirects"
+                    }
+                },
+                "required": [
+                    "method",
+                    "path",
+                    "handler",
+                    "action"
+                ]
+            }
+        }
+    },
+    "required": [
+        "routes"
+    ]
+}

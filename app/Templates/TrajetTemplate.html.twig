@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajet Details</title>
+    <link rel="stylesheet" href="/Templates/css/dashboard.css">
+</head>
+<body>
+    <div class="trajet-container">
+        <div class="trajet-image" style="background-image: url('{{ imageUrl }}');"></div>
+        <div class="trajet-details">
+            <h2>{{ trajet.getDestination }}</h2>
+            <p><strong>Start Date:</strong> {{ trajet.getStartDate }}</p>
+            <p><strong>End Date:</strong> {{ trajet.getEndDate }}</p>
+            <p><strong>Person ID:</strong> {{ trajet.getPerson_Id }}</p>
+            {% if trajet.additional_info is not empty %}
+                <p><strong>Additional Info:</strong> {{ trajet.additional_info }}</p>
+            {% else %}
+                <p><strong>Additional Info:</strong> No additional information available.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

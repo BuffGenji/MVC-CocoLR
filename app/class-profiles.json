@@ -1,0 +1,598 @@
+{
+    "App\\Controllers\\HomeController": {
+        "description": "This class is responsible for rendering the home page",
+        "type": "class",
+        "namespace": "App\\Controllers",
+        "implements": "Page",
+        "constants": {
+            "native": [],
+            "inherited": {
+                "Page": {
+                    "LOGIN_TEMPLATE": "LogInPageTemplate.html.twig",
+                    "HOME_TEMPLATE": "HomePageTemplate.html.twig",
+                    "SIGNUP_TEMPLATE": "SignUpPageTemplate.html.twig"
+                }
+            }
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "twig",
+                        "type": "Slim\\Views\\Twig",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "render",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "Psr\\Http\\Message\\ServerRequestInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "Psr\\Http\\Message\\ResponseInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "apples",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "Psr\\Http\\Message\\ServerRequestInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "Psr\\Http\\Message\\ResponseInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Controllers\\LogInController": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Controllers",
+        "implements": "Page",
+        "constants": {
+            "native": [],
+            "inherited": {
+                "Page": {
+                    "LOGIN_TEMPLATE": "LogInPageTemplate.html.twig",
+                    "HOME_TEMPLATE": "HomePageTemplate.html.twig",
+                    "SIGNUP_TEMPLATE": "SignUpPageTemplate.html.twig"
+                }
+            }
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "twig",
+                        "type": "Slim\\Views\\Twig",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "render",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "Psr\\Http\\Message\\ServerRequestInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "Psr\\Http\\Message\\ResponseInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "login",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Controllers\\SignUpController": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Controllers",
+        "implements": "Page",
+        "constants": {
+            "native": [],
+            "inherited": {
+                "Page": {
+                    "LOGIN_TEMPLATE": "LogInPageTemplate.html.twig",
+                    "HOME_TEMPLATE": "HomePageTemplate.html.twig",
+                    "SIGNUP_TEMPLATE": "SignUpPageTemplate.html.twig"
+                }
+            }
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "twig",
+                        "type": "Slim\\Views\\Twig",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "render",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "Psr\\Http\\Message\\ServerRequestInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "Psr\\Http\\Message\\ResponseInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "signUp",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "Trajet": {
+        "description": "",
+        "type": "class",
+        "namespace": "",
+        "implements": "",
+        "constants": {
+            "native": [],
+            "inherited": []
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "type": "array",
+                        "is_optional": true
+                    }
+                ]
+            },
+            {
+                "name": "hydrate",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "type": "array",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "getId",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "setId",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "getPersonId",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "setPerson_Id",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "type": "int",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "getDestination",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "setDestination",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "destination",
+                        "type": "string",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "getStartDate",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "setStart_Date",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "start_date",
+                        "type": "string",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "getEndDate",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "setEnd_Date",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "end_date",
+                        "type": "string",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Models\\HomeModel": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Models",
+        "implements": "",
+        "constants": {
+            "native": [],
+            "inherited": []
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "getAllTrajets",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "getTrajetById",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Models\\LogInModel": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Models",
+        "implements": "",
+        "constants": {
+            "native": [],
+            "inherited": []
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "checkIfInDb",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "password",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Models\\SignUpModel": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Models",
+        "implements": "",
+        "constants": {
+            "native": [],
+            "inherited": []
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            },
+            {
+                "name": "signUp",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "form_values",
+                        "type": "array",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "checkIfInDb",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    },
+    "App\\Services\\Query": {
+        "description": "",
+        "type": "class",
+        "namespace": "App\\Services",
+        "implements": "",
+        "constants": {
+            "native": [],
+            "inherited": []
+        },
+        "methods": [
+            {
+                "name": "__construct",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "pdo",
+                        "type": "PDO",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "select",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "columns",
+                        "type": "mixed",
+                        "is_optional": true
+                    }
+                ]
+            },
+            {
+                "name": "insertInto",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "table",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "values",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "values",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "from",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "table",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "where",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "column",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "operator",
+                        "type": "mixed",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "value",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            },
+            {
+                "name": "get",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": []
+            }
+        ]
+    },
+    "App\\Interfaces\\Page": {
+        "description": "",
+        "type": "interface",
+        "namespace": "App\\Interfaces",
+        "implements": [],
+        "constants": {
+            "LOGIN_TEMPLATE": "LogInPageTemplate.html.twig",
+            "HOME_TEMPLATE": "HomePageTemplate.html.twig",
+            "SIGNUP_TEMPLATE": "SignUpPageTemplate.html.twig"
+        },
+        "methods": [
+            {
+                "name": "render",
+                "is_static": false,
+                "visibility": "public",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "type": "Psr\\Http\\Message\\ServerRequestInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "response",
+                        "type": "Psr\\Http\\Message\\ResponseInterface",
+                        "is_optional": false
+                    },
+                    {
+                        "name": "args",
+                        "type": "mixed",
+                        "is_optional": false
+                    }
+                ]
+            }
+        ]
+    }
+}

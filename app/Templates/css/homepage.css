@@ -1,0 +1,22 @@
+.info-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 16px 0;
+}
+.info-card-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.info-card-content {
+    padding: 16px;
+}
+.info-card-content h3 {
+    margin: 0 0 8px;
+}
+.info-card-content p {
+    margin: 4px 0;
+}

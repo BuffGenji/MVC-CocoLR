@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="/Templates/css/dashboard.css">
+		<link rel="stylesheet" href="/Templates/css/homepage.css">
+	</head>
+	<body>
+		<div class="dashboard-container">
+			<aside class="sidebar">
+				<h2>Dashboard</h2>
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="/trajet/create">Create Trajet</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Settings</a></li>
+						<li><a href="/logout">Logout</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main-content">
+				<header>
+					<h1>Hey {{name}}</h1>
+				</header>
+				<section>
+					<p class="fadeout" >{{message}}</p>
+					<ul style="display: flex;
+																					                   justify-content: space;
+																					                   flex-direction: row;">
+	
+						{% for trajet in trajets %}
+							<div class="info-card">
+								<div
+									class="info-card-image">{# <img src="{{ imageUrl }}" alt="{{ imageAlt }}" /> #}
+								</div>
+								<div class="info-card-content">
+									<h3>Trajet</h3>
+									<p>{{ trajet.getDestination }}</p>
+									<p>{{ trajet.getStartDate }}</p>
+									<p>{{ trajet.getEndDate }}</p>
+									<a href="/trajet/{{trajet.getId}}">View Details</a>
+									<a href="/trajet/delete/{{trajet.getId}}">Delete</a>
+								</div>
+							</div>
+						{% else %}
+							<li>No trips found.</li>
+						{% endfor %}
+					</ul>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

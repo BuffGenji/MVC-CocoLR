@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Confirm Trajet</title>
+		<link
+		rel="stylesheet" href="/Templates/css/confirm.css">
+
+		{# This is for the map #}
+		<link href="https://api.mapbox.com/mapbox-gl-js/v3.9.1/mapbox-gl.css" rel="stylesheet">
+		<script src="https://api.mapbox.com/mapbox-gl-js/v3.9.1/mapbox-gl.js"></script>
+		<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+		{# This is for the map #}
+
+        {# JS necessary for it #}
+        <script type="module" src="/Templates/js/trajet_creator.js" defer></script>
+        {# JS necessary for it #}
+
+		{# Other #}
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.3.1/mapbox-gl-directions.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.3.1/mapbox-gl-directions.css" type="text/css">
+	    {# Other #}
+
+	</head>
+	<body>
+		<form action="/trajet/confirm" method="post" class="container">
+			<div id="map"></div>    
+			<textarea placeholder="Write additional information here..."></textarea>
+			<p>Departure:
+				<span>{{trajet.getDeparture}}</span>
+			</p>
+			<p>Destination:
+				<span>{{trajet.getDestination}}</span>
+			</p>
+			<p>Start Date:
+				<span>{{trajet.getStartDate}}</span>
+			</p>
+			<p>End Date:
+				<span>
+				{{trajet.getEndDate}}
+			</p>
+		</span>
+	</body>
+</html></p><button>Confirm</button></form></body></html>	
