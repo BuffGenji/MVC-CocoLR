@@ -17,6 +17,10 @@ abstract class Page {
     const LANDING_PAGE_TEMPLATE = 'LandingPageTemplate.html.twig';
     const CONFIRM_TRAJET_TEMPLATE = 'TrajetConfirmTemplate.html.twig';
 
+    const ERROR_PAGE_NOT_FOUND = 'Error404.html.twig';
+    const PROFILE_PAGE_TEMPLATE = 'ProfilePageTemplate.html.twig';
+
+
 
     /**
      * the obligatory render method

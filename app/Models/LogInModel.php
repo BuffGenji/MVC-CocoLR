@@ -18,15 +18,15 @@ class LogInModel
         $this->pdo = Database::connect();
     }
 
-    public function checkIfInDb(string $name, string $password)
+    public function checkIfInDb(string $email, string $password)
     {
         $user = (new Query($this->pdo))
             ->select()
             ->from('persons')
             ->where(
-                ['name', 'password'],
+                ['email', 'password'],
                 '=',
-                [$name, $password]
+                [$email, $password]
             )
             ->get();
         return $user;
@@ -43,15 +43,14 @@ class LogInModel
     public function fillSession(string $email): void
     {
         $query = (new Query($this->pdo))
-            ->select(['name', 'email'])
+            ->select(['name', 'email','id'])
             ->from('persons')
             ->where('email', '=', $email)
             ->get();
-
-        dd($query);
-        if (!empty($query)) {
-            Session::set('name', $query['name']);
-            Session::set('email', $query['email']);
+        if (!empty($query)) { 
+            Session::set('name', $query[0]['name']);
+            Session::set('email', $query[0]['email']);
+            Session::set('id', $query[0]['id']);
         }
     }
 

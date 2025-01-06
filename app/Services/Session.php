@@ -14,7 +14,6 @@ session_start();
 class Session
 {
 
-
     public static function set(string $key, $value)
     {
         $_SESSION[$key] = $value;
@@ -34,8 +33,8 @@ class Session
     {
         session_destroy();
     }
-
-    public static function fill(string $email) {
-        
+    public static function start() {
+        session_start();
     }
+
 }

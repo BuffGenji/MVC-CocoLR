@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Profile Page</title>
+		<link rel="stylesheet" href="/Templates/css/profilepage.css">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="profile-header">
+				<h1>Profile</h1>
+			</div>
+			<div class="profile-field">
+				<label for="name">Name:</label>
+				<p id="name">{{ user.name }}</p>
+			</div>
+			<div class="profile-field">
+				<label for="email">Email:</label>
+				<p id="email">{{ user.email }}</p>
+			</div>
+			<div class="profile-field">
+				<label for="bio">Bio:</label>
+                {% if user.bio %}
+				<p id="bio">{{ user.bio }}</p>
+                {% else %}
+                <p id="bio"> Coming soon . . . </p>
+                {% endif %}
+			</div>
+		</div>
+	</body>
+</html>

@@ -90,6 +90,21 @@
             "handler": "App\\Controllers\\LogOutController",
             "action": "logOut",
             "name" : "logout"
+        },{
+            "method": "get",
+            "path": "error",
+            "handler": "App\\Controllers\\ErrorController",
+            "action": "render",
+            "name": "render_error"
+        },
+        {
+            "method": "get",
+            "path": "/profile",
+            "handler":"App\\Controllers\\ProfilePageController",
+            "action": "render",
+            "name": "render_profile"
+
+
         }
     ]
 }

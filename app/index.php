@@ -13,11 +13,13 @@ declare(strict_types=1);
 require_once __DIR__ . '\\..\\vendor\\autoload.php';
 
 use App\Services\Authentication;
+use App\Services\Session;
 use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 use DI\Container;
 
+Session::start();
 
 // updates the class profiles
 $updateClassProfiles = (function () {
@@ -59,7 +61,7 @@ $middleWareSettings = (function ()  use ($settings) {
     $app = $settings->app;
     $container = $settings->container;
     $app->add(TwigMiddleware::create($app, $container->get(Twig::class)));
-    $app->add(new Authentication());
+    // $app->add(new Authentication());
 
     // later when grouping things together, we can add more middleware here
     $app->addRoutingMiddleware();
